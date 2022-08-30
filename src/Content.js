@@ -1,17 +1,9 @@
-import "./App.css"
+import content from "./Content.module.css";
 
 const Content = () => {
   return (
-    <div>
-      <div className="sidebar">
-        <div>My profile</div>
-        <div>News</div>
-        <div>Music</div>
-        <div>Games</div>
-        <div>Settings</div>
-      </div>
-    </div>
+  <div className={content.text}>Content</div>
   );
 };
 
-export default Content
+export default Content;

@@ -1,3 +1,5 @@
 .block {
     background-color: bisque;
+    grid-area: header;
 }
+
