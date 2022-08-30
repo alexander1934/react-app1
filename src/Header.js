@@ -1,10 +1,8 @@
+import header from "./Header.module.css"
+
 const Header = () => {
   return (
-    <ul>
-      <li>Home</li>
-      <li>Menu</li>
-      <li>Options</li>
-    </ul>
+    <div className={header.block}>Social Network</div>
   );
 };
 
