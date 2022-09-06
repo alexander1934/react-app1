@@ -1,4 +1,4 @@
 .text {
-    background-color: royalblue;
+    background-color: rgb(219, 219, 219);
     grid-area: content;
 }

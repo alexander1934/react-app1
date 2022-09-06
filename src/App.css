@@ -1,8 +1,9 @@
 .app-wrapper {
   display: grid;
-  grid-template-columns: 30% 70%;
-  grid-template-rows: minmax (150px, 300px) auto;
-  grid-template-areas:
-    "header header"
-    "side content";
+  grid-template:
+   [start] "header header" 55px [row2]
+   [row2]  "side content" 800px [row-end] / 1fr 5fr;
+   grid-gap: 15px;
+   background-color: gray;
+   height: 1080px;
 }

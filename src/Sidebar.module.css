@@ -1,4 +1,9 @@
 .list {
-    background-color: violet;
+    background-color: rgb(201, 201, 201);
     grid-area: side;
+    padding: 30px 69px;
+}
+
+.item {
+    padding: 5px;
 }
