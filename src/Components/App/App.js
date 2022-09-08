@@ -1,8 +1,8 @@
-import logo from "./logo.svg";
+import logo from "../../logo.svg";
 import "./App.css";
-import Header from "./Header";
-import Content from "./Content";
-import Sidebar from "./Sidebar";
+import Header from "../Header/Header";
+import Content from "../Content/Content";
+import Sidebar from "../Sidebar/Sidebar";
 
 const App = () => {
   return (
