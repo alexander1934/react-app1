@@ -1,9 +1,10 @@
 .app-wrapper {
   display: grid;
   grid-template:
-   [start] "header header" 55px [row2]
-   [row2]  "side content" 800px [row-end] / 1fr 5fr;
+   [start]  "side content" minmax(500px, max-content) [row-end] / 250px 900px;
    grid-gap: 15px;
    background-color: gray;
    height: 1080px;
+   justify-content: center;
+   padding-top: 25px;
 }
