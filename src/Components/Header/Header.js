@@ -6,6 +6,7 @@ const Header = () => {
   <div className={header.block}>
     <div className={header.logo}>
       <img src={logo}></img>
+      <div className={header.brand}>SocialWeb</div>
     </div>
     <div className={header.content}></div>
     </div>

@@ -1,7 +1,7 @@
 import logo from "../../logo.svg";
 import "./App.css";
 import Header from "../Header/Header";
-import Content from "../Content/Content";
+import Profile from "../Profile/Profile";
 import Sidebar from "../Sidebar/Sidebar";
 
 const App = () => {
@@ -10,7 +10,7 @@ const App = () => {
       <Header />
       <div className="app-wrapper">
       <Sidebar />
-      <Content />
+      <Profile />
       </div>
     </div>
   );

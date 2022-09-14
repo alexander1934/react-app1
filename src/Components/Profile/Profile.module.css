@@ -1,0 +1,12 @@
+.page {
+    background-color: rgb(219, 219, 219);
+    grid-area: profile;
+    border-radius: 8px;
+}
+
+.background {
+    width: 100%;
+    max-height: 170px;
+    border-radius: 8px 8px 0 0;
+    object-fit: cover;
+}

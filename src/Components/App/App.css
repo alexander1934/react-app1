@@ -1,7 +1,7 @@
 .app-wrapper {
   display: grid;
   grid-template:
-   [start]  "side content" minmax(500px, max-content) [row-end] / 250px 900px;
+   [start]  "side profile" minmax(500px, max-content) [row-end] / 250px 900px;
    grid-gap: 15px;
    background-color: gray;
    height: 1080px;

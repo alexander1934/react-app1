@@ -1,6 +1,20 @@
 .block {
     background-color: rgb(172, 172, 172);
     grid-area: header;
+    display: flex;
 }
+
+.logo {
+    display: flex;
+    margin-left: 19.6%;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    font-size: 24px;
+}
+
 
 
