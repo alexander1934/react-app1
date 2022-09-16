@@ -1,10 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap');
+
+.app {
+  font-family: 'Inter', sans-serif;;
+}
+
 .app-wrapper {
   display: grid;
   grid-template:
-   [start]  "side profile" minmax(500px, max-content) [row-end] / 250px 900px;
-   grid-gap: 15px;
-   background-color: gray;
-   height: 1080px;
-   justify-content: center;
-   padding-top: 25px;
+    [start] "side profile" minmax(500px, max-content) [row-end] / 250px 900px;
+  grid-gap: 15px;
+  background-color: #2f3136;
+  height: 1080px;
+  justify-content: center;
+  padding-top: 25px;
 }

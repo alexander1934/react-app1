@@ -1,7 +1,8 @@
 .block {
-    background-color: rgb(172, 172, 172);
+    background-color: #36393f;
     grid-area: header;
     display: flex;
+    color: white;
 }
 
 .logo {
