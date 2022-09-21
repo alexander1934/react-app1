@@ -4,8 +4,15 @@
     padding: 30px 30px;
     border-radius: 8px;
     color: white;
+    list-style: none;
+    margin: 0;
 }
 
 .item {
     padding: 5px;
+}
+
+.item a {
+    text-decoration: none;
+    color: white;;
 }
