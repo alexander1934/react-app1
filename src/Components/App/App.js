@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import logo from "../../logo.svg";
 import "./App.css";
 import Header from "../Header/Header";
 import Profile from "../Profile/Profile";
@@ -19,7 +18,7 @@ const App = () => {
           <div className="app-wrapper-content">
             <Routes>
               <Route path="/profile" element={<Profile />} />
-              <Route path="/messages" element={<Messages />} />
+              <Route path="/messages/*" element={<Messages />} />
               <Route path="/news" element={<News />} />
               <Route path="/music" element={<Music />} />
               <Route path="/settings" element={<Settings />} />

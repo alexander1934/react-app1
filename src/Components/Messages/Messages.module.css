@@ -1,0 +1,17 @@
+.wrapper {
+    display: grid;
+    grid-template-areas: 
+    "dialogs dialog";
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: minmax(600px, auto);
+}
+
+.dialogs {
+    grid-area: dialogs;
+    border-right: 1px solid rgb(80, 80, 80);
+    text-decoration: none;
+}
+
+.dialog {
+    grid-area: dialog;
+}

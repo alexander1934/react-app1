@@ -1,0 +1,6 @@
+.dialogs__item {
+    color:white;
+    border-bottom: 1px solid rgb(78, 78, 78);
+    padding: 15px;
+    align-items: center;
+}
