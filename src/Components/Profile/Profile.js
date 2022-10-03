@@ -1,13 +1,11 @@
+import Background from "./Background/Background";
 import profile from "./Profile.module.css";
 import UserName from "./Username/Username";
 
 const Profile = () => {
   return (
     <div className={profile.page}>
-      <img
-        src="https://img.freepik.com/free-vector/cute-weather-pattern-background-wallpaper-weather-vector-illustration_53876-140174.jpg?w=1380&t=st=1663161628~exp=1663162228~hmac=e97b80a5efa60bfd58a5ff5c06befef4f6a1ea0f40810af121a7392c99b1dfa9"
-        className={profile.background}
-      />
+     <Background src="https://images.unsplash.com/photo-1493130952181-47e36589f64d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1554&q=80"/>
       <UserName
         firstName="Alexander"
         lastName="Kovalenko"

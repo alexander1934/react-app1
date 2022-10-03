@@ -3,4 +3,12 @@
     border-bottom: 1px solid rgb(78, 78, 78);
     padding: 15px;
     align-items: center;
+    color: white;
+    list-style: none;
+}
+
+.dialogs__item a {
+    color: white;
+    list-style: none;
+    text-decoration: none;
 }
