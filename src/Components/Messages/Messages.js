@@ -3,23 +3,11 @@ import DialogsItem from "./DialogsItem/DialogsItem";
 import Message from "./Message/Message";
 
 const Messages = (props) => {
-  let userData = [
-    { id: 1, name: "Владислав Топчиев" },
-    { id: 2, name: "Максим Муранов" },
-    { id: 3, name: "Даниил Матяш" },
-    { id: 4, name: "Никита Быков" },
-    { id: 5, name: "Иван Кириченко" },
-    { id: 6, name: "Никита Гузий" },
-    { id: 7, name: "Иван Романченко" },
-  ];
-
-  let dialogElements = userData.map((user) => (
+  let dialogElements = props.dialogs.map((user) => (
     <DialogsItem name={user.name} id={user.id} />
   ));
 
-  let messagesData = [{ value: "Привет" }, { value: "Как дела" }];
-
-  let messagesElements = messagesData.map((message) => (
+  let messagesElements = props.messages.map((message) => (
     <Message value={message.value} />
   ));
 

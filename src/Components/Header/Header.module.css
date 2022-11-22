@@ -7,7 +7,6 @@
 
 .logo {
     display: flex;
-    margin-left: 19.6%;
 }
 
 .brand {
@@ -15,4 +14,9 @@
     align-items: center;
     margin-left: 10px;
     font-size: 24px;
+}
+
+.wrap {
+    width: 1150px;
+    margin: 0 auto;
 }

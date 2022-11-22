@@ -5,19 +5,19 @@ const Sidebar = () => {
   return (
     <ul className={sidebar.list}>
       <li className={sidebar.item}>
-        <NavLink to={"/profile"}>My profile</NavLink>
+        <NavLink to={"/profile"} className = { navData => navData.isActive ? sidebar.active : sidebar.item }>My profile</NavLink>
       </li>
       <li className={sidebar.item}>
-        <NavLink to={"/messages"}>Messages</NavLink>
+        <NavLink to={"/messages"} className = { navData => navData.isActive ? sidebar.active : sidebar.item }>Messages</NavLink>
       </li>
       <li className={sidebar.item}>
-        <NavLink to={"/news"}>News</NavLink>
+        <NavLink to={"/news"} className = { navData => navData.isActive ? sidebar.active : sidebar.item }>News</NavLink>
       </li>
       <li className={sidebar.item}>
-        <NavLink to={"/music"}>Music</NavLink>
+        <NavLink to={"/music"} className = { navData => navData.isActive ? sidebar.active : sidebar.item }>Music</NavLink>
       </li>
       <li className={sidebar.item}>
-        <NavLink to={"/settings"}>Settings</NavLink>
+        <NavLink to={"/settings"} className = { navData => navData.isActive ? sidebar.active : sidebar.item }>Settings</NavLink>
       </li>
     </ul>
   );

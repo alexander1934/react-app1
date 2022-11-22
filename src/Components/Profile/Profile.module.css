@@ -3,6 +3,19 @@
     grid-area: profile;
     border-radius: 8px;
     color: white;
+    max-height: 700px;
+    overflow-y: scroll;
+}
+
+.page::-webkit-scrollbar {
+    width: 3px;
+    background-color: #3b3b3b;
+    height: 400px;
+}
+
+.page::-webkit-scrollbar-thumb {
+    background-color: #555555;
+    border-radius: 40px;
 }
 
 .background {
@@ -11,4 +24,8 @@
     border-radius: 8px 8px 0 0;
     object-fit: cover;
     margin-bottom: 3%;
+}
+
+.info {
+    padding-left: 3%;
 }

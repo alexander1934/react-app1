@@ -1,6 +1,8 @@
 .message {
     border: 1px solid rgb(78, 78, 78);
-    border-radius: 10px;
+    border-radius: 15px;
     margin-bottom: 10px;
     flex-basis: auto;
+    width: max-content;
+    padding: 10px;
 }

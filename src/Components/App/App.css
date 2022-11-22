@@ -10,7 +10,7 @@
     [start] "side profile" minmax(500px, max-content) [row-end] / 250px 900px;
   grid-gap: 15px;
   background-color: #2f3136;
-  height: 1080px;
+  height: 100vh;
   justify-content: center;
   padding-top: 25px;
 }

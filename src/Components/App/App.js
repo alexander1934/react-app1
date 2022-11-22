@@ -1,24 +1,23 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Header from "../Header/Header";
 import Profile from "../Profile/Profile";
 import Sidebar from "../Sidebar/Sidebar";
 import Messages from "../Messages/Messages";
 import News from "../News/News";
-import Music from './../Music/Music';
+import Music from "./../Music/Music";
 import Settings from "../Settings/Settings";
 
-const App = () => {
+const App = (props) => {
   return (
-    <BrowserRouter>
       <div className="app">
         <Header />
         <div className="app-wrapper">
           <Sidebar />
           <div className="app-wrapper-content">
             <Routes>
-              <Route path="/profile" element={<Profile />} />
-              <Route path="/messages/*" element={<Messages />} />
+              <Route path="/profile" element={<Profile posts={props.state.postsData}/>} />
+              <Route path="/messages/*" element={<Messages dialogs={props.state.userData} messages={props.state.messagesData}/>}/>
               <Route path="/news/*" element={<News />} />
               <Route path="/music/*" element={<Music />} />
               <Route path="/settings/*" element={<Settings />} />
@@ -26,7 +25,6 @@ const App = () => {
           </div>
         </div>
       </div>
-    </BrowserRouter>
   );
 };
 
