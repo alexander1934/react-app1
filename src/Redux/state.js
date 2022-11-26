@@ -1,3 +1,5 @@
+let rerenderEntireTree;
+
 let state = {
     userData: [
       { id: 1, name: "Владислав Топчиев" },
@@ -17,17 +19,34 @@ let state = {
     ],
 
     postsData: [
-      {text:"freg4gbrbrtbrbr", likes:21},
-      {text:"freg4gbrbrtbrbr", likes:21},
-      {text:"freg4gbrbrtbrbr", likes:21},
-      {text:"freg4gbrbrtbrbr", likes:21},
-      {text:"freg4gbrbrtbrbr", likes:21},
-      {text:"freg4gbrbrtbrbr", likes:21},
-      {text:"freg4gbrbrtbrbr", likes:21},
-      {text:"freg4gbrbrtbrbr", likes:21},
-      {text:"freg4gbrbrtbrbr", likes:21},
-      {text:"freg4gbrbrtbrbr", likes:21},
-    ]
+      {id:1, text:"YEEES", likes:21},
+      {id:2, text:"GG", likes:21},
+      {id:3, text:"Hahahahaha", likes:21},
+      {id:4, text:"Alexandeeer", likes:21},
+    ],
+
+    newPostText: "",
 };
+
+window.state = state;
+
+export let addPost = () => {
+  let newPost = {
+    id: 5,
+    text: state.newPostText,
+    likes: 0,
+  }
+  state.postsData.push(newPost);
+  rerenderEntireTree(state);
+}
+
+export let updateNewPostText = (newText) => {
+  state.newPostText = newText;
+  rerenderEntireTree(state);
+}
+
+export const reloader = (observer) => {
+  rerenderEntireTree = observer;
+}
 
 export default state

@@ -15,7 +15,7 @@ const Profile = (props) => {
           id="@alexanderkovalenko"
         />
         <Status value="Hi!!" />
-        <Posts posts={props.posts}/>
+        <Posts posts={props.posts} addPost={props.addPost} newPostText={props.newPostText} updateNewPostText ={props.updateNewPostText}/>
       </div>
     </div>
   );

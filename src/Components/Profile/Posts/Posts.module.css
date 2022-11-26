@@ -2,7 +2,6 @@ input,button,textarea{font-family:inherit;}
 
 .block {
     padding-top: 10px;
-    overflow-y: hidden;
 }
 
 input {
@@ -14,4 +13,5 @@ input {
     border-bottom: 1px solid gray;
     font-size: 15px;
     height: 35px;
+    width: 100%;
 }
