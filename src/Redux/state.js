@@ -1,6 +1,5 @@
-let rerenderEntireTree;
-
-let state = {
+let store = {
+  _state: {
     userData: [
       { id: 1, name: "Владислав Топчиев" },
       { id: 2, name: "Максим Муранов" },
@@ -13,40 +12,50 @@ let state = {
     ],
 
     messagesData: [
-      { value: "Привет" }, 
+      { value: "Привет" },
       { value: "Как дела" },
       { value: "Как дела" },
     ],
 
     postsData: [
-      {id:1, text:"YEEES", likes:21},
-      {id:2, text:"GG", likes:21},
-      {id:3, text:"Hahahahaha", likes:21},
-      {id:4, text:"Alexandeeer", likes:21},
+      { id: 1, text: "YEEES", likes: 21 },
+      { id: 2, text: "GG", likes: 21 },
+      { id: 3, text: "Hahahahaha", likes: 21 },
+      { id: 4, text: "Alexandeeer", likes: 21 },
     ],
 
     newPostText: "",
+  },
+  getState() {
+    return this._state;
+  },
+  _rerenderEntireTree() {
+    console.log("state changed");
+  },
+  updateNewPostText(newText) {
+    this._state.newPostText = newText;
+    this._rerenderEntireTree(this._state);
+  },
+  reloader(observer) {
+    this._rerenderEntireTree = observer;
+  },
+  dispatch(action){
+    if(action.type === 'ADD-POST'){
+      let newPost = {
+        id: 5,
+        text: this._state.newPostText,
+        likes: 0,
+      };
+      this._state.postsData.push(newPost);
+      this._rerenderEntireTree(this._state);
+    }
+    else if (action.type === 'UPDATE-NEW-POST-TEXT'){
+      this._state.newPostText = action.text;
+      this._rerenderEntireTree(this._state);
+    }
+  },
 };
 
-window.state = state;
+export default store;
 
-export let addPost = () => {
-  let newPost = {
-    id: 5,
-    text: state.newPostText,
-    likes: 0,
-  }
-  state.postsData.push(newPost);
-  rerenderEntireTree(state);
-}
-
-export let updateNewPostText = (newText) => {
-  state.newPostText = newText;
-  rerenderEntireTree(state);
-}
-
-export const reloader = (observer) => {
-  rerenderEntireTree = observer;
-}
-
-export default state
+window.store = store;
