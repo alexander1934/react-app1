@@ -12,8 +12,8 @@ const Messages = (props) => {
 
   let onMessageChange = () => {
     let text = inputElement.current.value;
-    props.dispatch({type: "UPDATE-NEW-MESSAGE-TEXT", text: text})
-  }
+    props.dispatch({ type: "UPDATE-NEW-MESSAGE-TEXT", text: text });
+  };
 
   let dialogElements = props.dialogs.map((user) => (
     <DialogsItem name={user.name} id={user.id} />

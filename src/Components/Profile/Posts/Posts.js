@@ -13,7 +13,7 @@ const Posts = (props) => {
     let text = inputElement.current.value;
     props.dispatch({ type: "UPDATE-NEW-POST-TEXT", text: text });
   };
-  
+
   let postElements = props.posts.map((el) => (
     <Post text={el.text} likes={el.likes} />
   ));
