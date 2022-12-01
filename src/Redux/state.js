@@ -11,11 +11,7 @@ let store = {
       { id: 8, name: "Иван Романченко" },
     ],
 
-    messagesData: [
-      { value: "Привет" },
-      { value: "Как дела" },
-      { value: "Как дела" },
-    ],
+    messagesData: [{ id: 1, value: "Привет" }, { id: 2, value: "Как дела" }],
 
     postsData: [
       { id: 1, text: "YEEES", likes: 21 },
@@ -25,33 +21,61 @@ let store = {
     ],
 
     newPostText: "",
+    newMessageText: "",
   },
+
   getState() {
     return this._state;
   },
+
   _rerenderEntireTree() {
     console.log("state changed");
   },
+
+  addPost() {
+    let newPost = {
+      id: 5,
+      text: this._state.newPostText,
+      likes: 0,
+    };
+    this._state.postsData.push(newPost);
+    this._state.newPostText = "";
+    this._rerenderEntireTree(this._state);
+  },
+
   updateNewPostText(newText) {
     this._state.newPostText = newText;
     this._rerenderEntireTree(this._state);
   },
+
+  addMessage() {
+    let newMessage = {
+      id: 3,
+      value: this._state.newMessageText,
+    };
+    this._state.messagesData.push(newMessage);
+    this._state.newMessageText = "";
+    this._rerenderEntireTree(this._state);
+  },
+
+  updateNewMessageText(newText) {
+    this._state.newMessageText = newText;
+    this._rerenderEntireTree(this._state);
+  },
+
   reloader(observer) {
     this._rerenderEntireTree = observer;
   },
-  dispatch(action){
-    if(action.type === 'ADD-POST'){
-      let newPost = {
-        id: 5,
-        text: this._state.newPostText,
-        likes: 0,
-      };
-      this._state.postsData.push(newPost);
-      this._rerenderEntireTree(this._state);
-    }
-    else if (action.type === 'UPDATE-NEW-POST-TEXT'){
-      this._state.newPostText = action.text;
-      this._rerenderEntireTree(this._state);
+
+  dispatch(action) {
+    if (action.type === "ADD-POST") {
+      this.addPost();
+    } else if (action.type === "UPDATE-NEW-POST-TEXT") {
+      this.updateNewPostText(action.text);
+    } else if (action.type === "ADD-MESSAGE"){
+      this.addMessage();
+    } else if (action.type === "UPDATE-NEW-MESSAGE-TEXT"){
+      this.updateNewMessageText(action.text);
     }
   },
 };
