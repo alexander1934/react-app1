@@ -20,9 +20,7 @@ const App = (props) => {
               path="/profile"
               element={
                 <Profile
-                  posts={props.state.profilePage.postsData}
-                  dispatch={props.dispatch}
-                  newPostText={props.state.profilePage.newPostText}
+                  store={props.store}
                 />
               }
             />

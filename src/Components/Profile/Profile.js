@@ -1,5 +1,5 @@
 import Background from "./Background/Background";
-import Posts from "./Posts/Posts";
+import PostsContainer from "./Posts/PostsContainer";
 import profile from "./Profile.module.css";
 import Status from "./Status/Status";
 import UserName from "./Username/Username";
@@ -15,10 +15,8 @@ const Profile = (props) => {
           id="@alexanderkovalenko"
         />
         <Status value="Hi!!" />
-        <Posts
-          posts={props.posts}
-          dispatch={props.dispatch}
-          newPostText={props.newPostText}
+        <PostsContainer
+          store = {props.store}
         />
       </div>
     </div>
