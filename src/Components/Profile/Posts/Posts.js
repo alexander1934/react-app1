@@ -14,7 +14,7 @@ const Posts = (props) => {
     props.onPostChange(text);
   };
 
-  let postElements = props.postsData.map((el) => (
+  let postElements = props.profilePage.postsData.map((el) => (
     <Post text={el.text} likes={el.likes} />
   ));
 
@@ -26,7 +26,7 @@ const Posts = (props) => {
         ref={inputElement}
         type="text"
         placeholder="Add post"
-        value={props.newPostText}
+        value={props.profilePage.newPostText}
       />
       <button onClick={addPost}>add post</button>
       {postElements}

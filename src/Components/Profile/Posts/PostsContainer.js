@@ -1,26 +1,24 @@
-import React from "react";
 import Posts from "./Posts";
+import { connect } from "react-redux";
 
-const PostsContainer = (props) => {
-
-  let state = props.store.getState();
-
-  let addPost = () => {
-    props.store.dispatch({ type: "ADD-POST" });
+const mapStateToProps = (state) => {
+  return {
+    profilePage: state.profilePage,
   };
-
-  let onPostChange = (text) => {
-    props.store.dispatch({ type: "UPDATE-NEW-POST-TEXT", text: text });
-  };
-
-  return (
-    <Posts
-      addPost={addPost}
-      onPostChange={onPostChange}
-      newPostText={state.profilePage.newPostText}
-      postsData={state.profilePage.postsData}
-    />
-  );
 };
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addPost: () => {
+      dispatch({ type: "ADD-POST" });
+    },
+
+    onPostChange: (text) => {
+      dispatch({ type: "UPDATE-NEW-POST-TEXT", text: text });
+    },
+  };
+};
+
+let PostsContainer = connect(mapStateToProps, mapDispatchToProps)(Posts);
 
 export default PostsContainer;

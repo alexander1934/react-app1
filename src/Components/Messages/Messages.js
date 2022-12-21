@@ -7,19 +7,19 @@ const Messages = (props) => {
   let inputElement = React.createRef();
 
   let addMessage = () => {
-    props.dispatch({ type: "ADD-MESSAGE" });
+    props.addMessage();
   };
 
   let onMessageChange = () => {
     let text = inputElement.current.value;
-    props.dispatch({ type: "UPDATE-NEW-MESSAGE-TEXT", text: text });
+    props.onMessageChange(text)
   };
 
-  let dialogElements = props.dialogs.map((user) => (
+  let dialogElements = props.messagesPage.userData.map((user) => (
     <DialogsItem name={user.name} id={user.id} />
   ));
 
-  let messagesElements = props.messages.map((message) => (
+  let messagesElements = props.messagesPage.messagesData.map((message) => (
     <Message value={message.value} />
   ));
 
@@ -32,7 +32,7 @@ const Messages = (props) => {
           <input
             onChange={onMessageChange}
             ref={inputElement}
-            value={props.newMessageText}
+            value={props.messagesPage.newMessageText}
             type="text"
             placeholder="Write a message"
           />
