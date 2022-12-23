@@ -16,11 +16,11 @@ const Messages = (props) => {
   };
 
   let dialogElements = props.messagesPage.userData.map((user) => (
-    <DialogsItem name={user.name} id={user.id} />
+    <DialogsItem name={user.name} id={user.id} key={user.id} />
   ));
 
   let messagesElements = props.messagesPage.messagesData.map((message) => (
-    <Message value={message.value} />
+    <Message value={message.value} key = {message.id} />
   ));
 
   return (

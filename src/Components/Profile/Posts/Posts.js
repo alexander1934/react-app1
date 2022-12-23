@@ -15,7 +15,7 @@ const Posts = (props) => {
   };
 
   let postElements = props.profilePage.postsData.map((el) => (
-    <Post text={el.text} likes={el.likes} />
+    <Post text={el.text} likes={el.likes} key ={el.id} />
   ));
 
   return (
