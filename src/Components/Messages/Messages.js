@@ -12,7 +12,7 @@ const Messages = (props) => {
 
   let onMessageChange = () => {
     let text = inputElement.current.value;
-    props.onMessageChange(text)
+    props.onMessageChange(text);
   };
 
   let dialogElements = props.messagesPage.userData.map((user) => (
@@ -20,7 +20,7 @@ const Messages = (props) => {
   ));
 
   let messagesElements = props.messagesPage.messagesData.map((message) => (
-    <Message value={message.value} key = {message.id} />
+    <Message value={message.value} key={message.id} />
   ));
 
   return (

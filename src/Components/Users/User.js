@@ -12,10 +12,12 @@ const User = (props) => {
       </div>
       <div className={style.userInfo}>
         <div className={style.username}>{props.name}</div>
-        <div className={style.location}>{props.location.country}, {props.location.city}</div>
+        {/* <div className={style.location}>{props.location.country}, {props.location.city}</div> */}
         <div className={style.status}>{props.status}</div>
       </div>
-      <div className={style.followStatus}>Follow</div>
+      <div className={style.followStatus}>
+        {props.isFriends ? <button onClick={props.unfollow}>Unfollow</button> : <button onClick={props.follow()}>Follow</button>}
+      </div>
     </div>
   );
 };
