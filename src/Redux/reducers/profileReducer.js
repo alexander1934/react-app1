@@ -16,8 +16,8 @@ const profileReducer = (state = initialState, action) => {
         ...state,
         newPostText: "",
         postsData: [
-          ...state.postsData,
           { id: 5, text: state.newPostText, likes: 0 },
+          ...state.postsData,
         ],
       };
     case "UPDATE-NEW-POST-TEXT":
