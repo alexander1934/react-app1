@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import Users from "./Users";
+import Users from "./UsersClass";
 
 const mapStateToProps = (state) => {
   return {
@@ -16,6 +16,10 @@ const mapDispatchToProps = (dispatch) => {
     unfollow: (id) => {
       dispatch({ type: "UNFOLLOW", id: id });
     },
+    
+    setUsers: (users) => {
+      dispatch({ type: "SET-USERS", users: users})
+    }
   };
 };
 

@@ -1,3 +1,20 @@
+.main {
+    height: 600px;
+    overflow-y: scroll;
+}
+
+.main::-webkit-scrollbar {
+    width: 3px;
+    background-color: #3b3b3b;
+    height: 400px;
+}
+
+.main::-webkit-scrollbar-thumb {
+    background-color: #555555;
+    border-radius: 40px;
+}
+
+
 .user {
     border-bottom: 1px solid grey;
     padding: 10px;

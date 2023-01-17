@@ -1,9 +1,5 @@
 let initialState = {
-  usersData: [
-    { id: 1, name: "Alexander Kovalenko", isFriends: true, status: "I am Boss here", location: {city: "Rostov-on-Don", country: "Russia"}},
-    { id: 2, name: "Ivan Vasilev", isFriends: true, status: "I love vkusno i tochka", location: {city: "Rostov-on-Don", country: "Russia"}},
-    { id: 3, name: "Artem Sysoev", isFriends: false, status: "Bonjour", location: {city: "Paris", country: "French"}},
-  ],
+  usersData: [],
 };
 
 const usersReducer = (state = initialState, action) => {
@@ -13,7 +9,7 @@ const usersReducer = (state = initialState, action) => {
         ...state,
         usersData: state.usersData.map((u) => {
           if (u.id === action.id) {
-            return { ...u, isFriends: true };
+            return { ...u, followed: true };
           }
           return u;
         }),
@@ -23,11 +19,18 @@ const usersReducer = (state = initialState, action) => {
         ...state,
         usersData: state.usersData.map((u) => {
           if (u.id === action.id) {
-            return { ...u, isFriends: false };
+            return { ...u, followed: false };
           }
           return u;
         }),
       };
+    case "SET-USERS": 
+    return {
+      ...state, 
+      usersData:[
+      ...action.users
+      ], 
+     }
     default:
       return state;
   }
