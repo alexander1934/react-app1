@@ -1,5 +1,8 @@
 let initialState = {
   usersData: [],
+  pageSize: 5,
+  totalCount: 32,
+  currentPage: 1,
 };
 
 const usersReducer = (state = initialState, action) => {
@@ -24,13 +27,16 @@ const usersReducer = (state = initialState, action) => {
           return u;
         }),
       };
-    case "SET-USERS": 
-    return {
-      ...state, 
-      usersData:[
-      ...action.users
-      ], 
-     }
+    case "SET-USERS":
+      return {
+        ...state,
+        usersData: action.users,
+      };
+    case "SET-PAGE":
+      return {
+        ...state,
+        currentPage: action.page,
+      };
     default:
       return state;
   }

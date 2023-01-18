@@ -1,17 +1,21 @@
 .main {
-    height: 600px;
-    overflow-y: scroll;
+    
 }
 
-.main::-webkit-scrollbar {
+.usersBlock::-webkit-scrollbar {
     width: 3px;
     background-color: #3b3b3b;
     height: 400px;
 }
 
-.main::-webkit-scrollbar-thumb {
+.usersBlock::-webkit-scrollbar-thumb {
     background-color: #555555;
     border-radius: 40px;
+}
+
+.usersBlock {
+    overflow-y: scroll;
+    height: 600px;
 }
 
 
@@ -69,4 +73,22 @@ button {
   color: inherit;
   background-color: transparent;
   cursor: pointer;
+}
+
+.switches {
+    font-weight: 500;
+    font-size: 18px;
+    color: #aaaaaa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+span {
+    padding: 3px;
+    cursor: pointer;
+}
+
+.selected {
+    color: #ffffff;
 }

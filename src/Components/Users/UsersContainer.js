@@ -19,6 +19,10 @@ const mapDispatchToProps = (dispatch) => {
     
     setUsers: (users) => {
       dispatch({ type: "SET-USERS", users: users})
+    },
+
+    setPage: (page) => {
+      dispatch({ type: "SET-PAGE", page: page})
     }
   };
 };
