@@ -53,6 +53,13 @@ const mapStateToProps = (state) => {
   };
 };
 
-const UsersContainer = connect(mapStateToProps, {follow, unfollow, setUsers, setPage, setTotalCount, fetchingToggle})(UsersAPI);
+const UsersContainer = connect(mapStateToProps, {
+  follow,
+  unfollow,
+  setUsers,
+  setPage,
+  setTotalCount,
+  fetchingToggle,
+})(UsersAPI);
 
 export default UsersContainer;

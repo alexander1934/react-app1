@@ -12,17 +12,6 @@ let redusers = combineReducers({
 
 let store = legacy_createStore(redusers);
 
+window.store = store;
+
 export default store;
-
-
-// import profileReducer from './reducers/profileReducer';
-// import messagesReducer from './reducers/messagesReducer';
-// import { configureStore } from 'redux/toolkit';
-
-// let store = configureStore({
-//     reducer: {
-//         profilePage: profileReducer,
-//         messagesPage: messagesReducer,
-//     }
-// });
-// export default store;

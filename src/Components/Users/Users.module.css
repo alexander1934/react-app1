@@ -44,6 +44,14 @@
     padding: 10px;
 }
 
+.userInfo a {
+    text-decoration: none;   
+}
+
+.userInfo a :hover {
+    text-decoration: underline;
+}
+
 .image {
     width: 80px;
     height: 80px;
@@ -52,6 +60,7 @@
 
 .username {
     font-size: 18px;
+    color: #dddddd;
 }
 
 .location {

@@ -7,6 +7,8 @@ let initialState = {
   ],
 
   newPostText: "",
+
+  profile: null,
 };
 
 const profileReducer = (state = initialState, action) => {
@@ -25,9 +27,16 @@ const profileReducer = (state = initialState, action) => {
         ...state,
         newPostText: action.text,
       };
+    case "GET-PROFILE":
+      return {
+        ...state,
+        profile: action.profile,
+      }
     default:
       return state;
   }
 };
 
 export default profileReducer;
+
+export const getProfile = (profile) => ({ type: "GET-PROFILE", profile});

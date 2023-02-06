@@ -4,10 +4,10 @@ const UserName = (props) => {
   return (
     <div className={username.block}>
       <span>
-        {props.firstName} {props.lastName}
+        {props.name}
       </span>
       <br></br>
-      <span className={username.id}>{props.id}</span>
+      <span className={username.id}>@{props.id}</span>
     </div>
   );
 };
